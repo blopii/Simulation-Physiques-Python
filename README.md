@@ -1,6 +1,5 @@
 # Simulation-Physiques-Python
 Dépôt regroupant mes travaux d'auto-formation en Python : modélisation de trajectoires, dynamique de vol et algorithmes de calcul physique
-# Simulations Physiques et Mathématiques (Python)
 
 Ce dépôt présente ma progression en programmation et en modélisation, illustrant mon passage d'une approche arithmétique simple à l'utilisation de l'algèbre pour la simulation de vol.
 
