@@ -1,36 +1,24 @@
-# Simulation-Physiques-Python
-Dépôt regroupant mes travaux d'auto-formation en Python : modélisation de trajectoires, dynamique de vol et algorithmes de calcul physique
+# Simulation-Physiques-Python 
+Dépôt de travail personnel dédié à la réactivation des bases mathématiques et à l'initiation à la programmation scientifique (Python). L'objectif de ce projet est de lier l'apprentissage de l'algèbre linéaire et de la cinématique à des applications pratiques inspirées du secteur aérospatial.
 
-Ce dépôt présente ma progression en programmation et en modélisation, illustrant mon passage d'une approche arithmétique simple à l'utilisation de l'algèbre pour la simulation de vol.
 
-## Projets (Ordre de progression réelle)
+1.Progression Technique & Mathématique
+ Approche Arithmétique & Algorithmique de BaseScripts : 2D.py, 3D.py, intercepteur.py
+ Concepts mathématiques : Incrémentation discrète, gestion des repères cartésiens, conditions aux limites (y <= 0).
+ Objectif : Prise en main des boucles temporelles pour simuler le déplacement d'un point matériel (drone) à vecteur vitesse   constant ou semi-constant.
 
-### 1. Simulateur de Drone 3D (3D.py)
-- Niveau : Arithmétique
-- Notion : Gestion de coordonnées X, Y, Z par incrémentation
-- Description : Mon premier script de mouvement. Il gère la trajectoire d'un drone (décollage, navigation et atterrissage) par de simples additions et soustractions de coordonnées.
+2.Modélisation par Fonctions Affines & Cinématique Newtonienne
+  Scripts : trajectoire_linéaire.py, La_chute_libre.py, Intercepteur_haute_altitude.py
+  Concepts : Équations horaires du mouvement, fonctions affines (type : y = mt + p), polynômes du second degré (type : z =     -0.5 * g * t^2 + v_0 * t).
+  Objectif : Traduire les lois de la chute libre verticale sous forme algorithmique. Le script calcule l'évolution de          l'altitude et de la vitesse, et détermine de manière empirique l'apogée de la trajectoire par balayage dans une boucle.
 
-### 2. Simulation de Trajectoire Simple (trajectoire_linéaire.py)
-- Niveau : Algèbre de base
-- Notion : La fonction affine y = mt + y0
-- Description : Passage à la modélisation mathématique pour lier précisément l'altitude au temps de vol à l'aide d'une pente constante.
+3.Résolution de Systèmes Linéaires (Algorithme de Cramer)
+  Scripts : Orbital_rendezvous_solver.py, atmospheric_reentry_corridors.py, vector_thrust_alignment.py
+  Concepts : Systèmes d'équations linéaires à deux inconnues (2x2), calcul du déterminant principal (Delta = ad - bc),         théorème de Cramer, étude géométrique de l'intersection de deux droites (cas sécants, colinéaires superposés ou              colinéaires disjoints).
+  Objectif : Utiliser l'algèbre linéaire pour résoudre des problèmes d'intersection de trajectoires (rendez-vous orbital ou    couloir de rentrée) et de répartition de contraintes (alignement de poussée vectorielle). Le code identifie de manière       autonome la nature géométrique du système via l'analyse du déterminant (test : Delta != 0).
 
-### 3. Générateur de Rapport de Vol (Générateur_de_rapport_de_vol.py)
-- Niveau : Automatisation technique
-- Notion : Structuration de données et export
-- Description : Outil permettant de structurer les résultats des simulations et d'exporter un rapport technique lisible pour une analyse post-vol.
 
-### 4. Algorithme d'Interception Standard (intercepteur.py)
-- Niveau : Logique algorithmique et détection
-- Notion : Conditions d'arrêt et surveillance d'impact (y <= 0)
-- Description : Simulation de trajectoire jusqu'à l'impact au sol avec introduction d'une condition de sortie de boucle automatique dès que l'objectif est atteint.
 
-### 5. Analyse de la Chute Libre (La_chute_libre.py)
-- Niveau : Physique Newtonienne (Intermédiaire)
-- Notion : Signe de la pente et interprétation du mouvement
-- Description : Simulation capable d'interpréter le coefficient directeur pour annoncer de manière autonome si l'avion est en phase de montée ou de descente.
 
-### 6. Calculateur d'Interception Haute Altitude (Intercepteur_haute_altitude.py)
-- Niveau : Analyse complexe (Expert)
-- Notion : Comparaison de trajectoires multiples et calcul d'apogée
-- Description : Projet le plus avancé. Il suit deux objets en parallèle pour prédire et calculer un point d'interception précis entre une cible et un intercepteur.
+
+ 
